@@ -1,4 +1,5 @@
 public with sharing class HouseService {
+
   @AuraEnabled(cacheable=true)
   public static List<House__c> getRecords() {
     try {
@@ -17,4 +18,5 @@ public with sharing class HouseService {
       throw new AuraHandledException(e.getMessage());
     }
   }
+
 }
